@@ -45,6 +45,7 @@
                                         <state key="normal" title="Change"/>
                                         <connections>
                                             <action selector="chngeCountry2btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sJ-dx-UIE"/>
+                                            <segue destination="r6s-Tx-ZJU" kind="show" id="OGE-wV-NI4"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-QA-5R0">
@@ -255,4 +256,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OGE-wV-NI4"/>
+    </inferredMetricsTieBreakers>
 </document>
