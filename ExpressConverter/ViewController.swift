@@ -21,5 +21,27 @@ class ViewController: UIViewController {
     }
 
 
+    
+    
+    
+    
+    @IBAction func Resultbtn(_ sender: Any) {
+    
+    
+    print("helloworld")
+        
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
