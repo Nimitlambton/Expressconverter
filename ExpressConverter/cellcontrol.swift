@@ -17,9 +17,15 @@ class cellcontrol: UITableViewCell {
     
     @IBOutlet weak var clbl: UILabel!
     
+    
+    @IBOutlet weak var clbl2: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

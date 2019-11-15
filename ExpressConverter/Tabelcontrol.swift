@@ -48,18 +48,10 @@ class Tabelcontrol: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-      //  let cell = UITableViewCell()
-    
-        //cell.textLabel?.text = country[indexPath.row]
-/*
-        let cell = cellcontrol()
-        cell.clbl.text = country[indexPath.row]
-        return cell
- */
+  
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
     
         cell?.clbl.text = country[indexPath.row]
-        
         return cell!
     
     }
@@ -70,8 +62,12 @@ class Tabelcontrol: UITableViewController {
         print(indexPath.row)
         
         
-        let data = storyboard?.instantiateViewController(withIdentifier: "ABC") as? ViewController 
+        let data = storyboard?.instantiateViewController(withIdentifier: "ABC") as? ViewController
+    
         data?.clbl = country[indexPath.row]
+    
+        data?.clbl2 = country[indexPath.row]
+        
         self.navigationController?.pushViewController(data!, animated: true)
         
         

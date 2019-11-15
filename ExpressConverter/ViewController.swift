@@ -16,7 +16,8 @@ class ViewController: UIViewController {
    
     
    
-    var clbl = ""
+    var clbl = "country"
+    var clbl2 = " "
     //<-- all the labels --->
 
     //amount enter by user
@@ -48,10 +49,18 @@ class ViewController: UIViewController {
     
    //btn to change country 1
     @IBAction func chngeCountry1btn(_ sender: Any) {
+    
+        
+        
     }
     
     //btn to change country 2
     @IBAction func chngeCountry2btn(_ sender: Any) {
+    
+        
+        
+        
+        
     }
     
     //button to change rate
@@ -73,9 +82,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = " Express conv"
-        
         countrylabel1.text = clbl
-     
+    
+       
         
         
     }
