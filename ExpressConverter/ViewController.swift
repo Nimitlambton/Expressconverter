@@ -14,6 +14,9 @@ import UIKit
 
 class ViewController: UIViewController {
    
+    
+    var text = ""
+    
     //<-- all the labels --->
 
     //amount enter by user
@@ -70,6 +73,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = " Express converter"
+   
     }
 
 

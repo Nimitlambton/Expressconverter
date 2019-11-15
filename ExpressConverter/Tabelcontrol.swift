@@ -10,6 +10,10 @@ import UIKit
 
 class Tabelcontrol: UITableViewController {
 
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,7 +59,13 @@ class Tabelcontrol: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.row)
-    
+        
+        
+        let data = storyboard?.instantiateViewController(withIdentifier: "ABC") as? ViewController
+ 
+        self.navigationController?.pushViewController(data!, animated: true)
+        
+        
     }
     
     /*
