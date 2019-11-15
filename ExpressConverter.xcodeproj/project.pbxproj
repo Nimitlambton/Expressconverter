@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05A5E40F237DC8860016FD68 /* Tabelcontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A5E40E237DC8860016FD68 /* Tabelcontrol.swift */; };
+		9B5B3613237F1EED004DC116 /* cellcontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B3612237F1EED004DC116 /* cellcontrol.swift */; };
 		9BB894D22379C64600AA69A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB894D12379C64600AA69A4 /* AppDelegate.swift */; };
 		9BB894D42379C64600AA69A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB894D32379C64600AA69A4 /* ViewController.swift */; };
 		9BB894D72379C64600AA69A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB894D52379C64600AA69A4 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		05A5E40E237DC8860016FD68 /* Tabelcontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabelcontrol.swift; sourceTree = "<group>"; };
+		9B5B3612237F1EED004DC116 /* cellcontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellcontrol.swift; sourceTree = "<group>"; };
 		9BB894CE2379C64600AA69A4 /* ExpressConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB894D12379C64600AA69A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BB894D32379C64600AA69A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				9BB894D12379C64600AA69A4 /* AppDelegate.swift */,
 				9BB894D32379C64600AA69A4 /* ViewController.swift */,
 				05A5E40E237DC8860016FD68 /* Tabelcontrol.swift */,
+				9B5B3612237F1EED004DC116 /* cellcontrol.swift */,
 				9BB894D52379C64600AA69A4 /* Main.storyboard */,
 				9BB894D82379C64800AA69A4 /* Assets.xcassets */,
 				9BB894DA2379C64800AA69A4 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB894D42379C64600AA69A4 /* ViewController.swift in Sources */,
+				9B5B3613237F1EED004DC116 /* cellcontrol.swift in Sources */,
 				05A5E40F237DC8860016FD68 /* Tabelcontrol.swift in Sources */,
 				9BB894D22379C64600AA69A4 /* AppDelegate.swift in Sources */,
 			);

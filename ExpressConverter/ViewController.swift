@@ -15,8 +15,8 @@ import UIKit
 class ViewController: UIViewController {
    
     
-    var text = ""
-    
+   
+    var clbl = ""
     //<-- all the labels --->
 
     //amount enter by user
@@ -72,8 +72,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = " Express converter"
-   
+        self.title = " Express conv"
+        
+        countrylabel1.text = clbl
+     
+        
+        
     }
 
 
