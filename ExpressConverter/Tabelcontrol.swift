@@ -10,7 +10,7 @@ import UIKit
 
 class Tabelcontrol: UITableViewController {
 
-    
+     var tosend = " "
 
     
     
@@ -52,6 +52,7 @@ class Tabelcontrol: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
     
         cell?.clbl.text = country[indexPath.row]
+    
         return cell!
     
     }
@@ -61,16 +62,25 @@ class Tabelcontrol: UITableViewController {
         
         print(indexPath.row)
         
-        
+
+       
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
+       
         let data = storyboard?.instantiateViewController(withIdentifier: "ABC") as? ViewController
-    
+        
         data?.clbl = country[indexPath.row]
-    
+        
         data?.clbl2 = country[indexPath.row]
         
-        self.navigationController?.pushViewController(data!, animated: true)
+        tosend = country[indexPath.row]
         
+        performSegue(withIdentifier: "val", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let vc = segue.destination as! ViewController
+        vc.clbl = self.tosend
     }
     
     /*
