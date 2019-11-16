@@ -11,14 +11,14 @@ import UIKit
 class Tabelcontrol: UITableViewController {
 
      var tosend = " "
+     var del = 0
 
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        self.title = "select one"
+      self.title = "select one"
         
         // Uncomment the following line to preserve selection between presentations
         
@@ -60,7 +60,7 @@ class Tabelcontrol: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print(indexPath.row)
+        //print(indexPath.row)
         
 
        
@@ -72,6 +72,8 @@ class Tabelcontrol: UITableViewController {
         
         data?.clbl2 = country[indexPath.row]
         
+        
+        
         tosend = country[indexPath.row]
         
         performSegue(withIdentifier: "val", sender: self)
@@ -80,7 +82,21 @@ class Tabelcontrol: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let vc = segue.destination as! ViewController
-        vc.clbl = self.tosend
+      
+        
+        print(del)
+        if del == 1{
+        
+            vc.clbl = self.tosend
+    
+        }
+     else if del == 0 {
+        
+            vc.clbl2 = self.tosend
+        
+        }
+        
+        
     }
     
     /*

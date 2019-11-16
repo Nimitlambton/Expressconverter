@@ -14,10 +14,9 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    
-   
+    var tag = 0
     var clbl = "country"
-    var clbl2 = " "
+    var clbl2 = "country"
     //<-- all the labels --->
 
     //amount enter by user
@@ -45,23 +44,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var showResultlabel: UILabel!
     
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = " Express conv"
+        countrylabel1.text = clbl
+        countrylabel2.text = clbl2
+        
+        
+        
+    }
+    
+    
     //all the buttons
     
-   //btn to change country 1
-    @IBAction func chngeCountry1btn(_ sender: Any) {
+    @IBAction func changebtn(sender: UIButton) {
     
         
-        
+    tag = sender.tag
+    
+    performSegue(withIdentifier: "change", sender: self)
+    
     }
     
-    //btn to change country 2
-    @IBAction func chngeCountry2btn(_ sender: Any) {
+
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        let vc = segue.destination as! Tabelcontrol
         
-        
-        
+        vc.del = self.tag
+    
     }
+    
+    
     
     //button to change rate
     @IBAction func rateChngebtn(_ sender: Any) {
@@ -79,15 +95,7 @@ class ViewController: UIViewController {
     
    
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = " Express conv"
-        countrylabel1.text = clbl
-    
-       
-        
-        
-    }
+  
 
 
     
