@@ -42,11 +42,14 @@ class ViewController: UIViewController {
     //resultlabel
     @IBOutlet weak var showResultlabel: UILabel!
     
- //global vaiables
+ //all global vaiables
     
     var rate = 0.0
     
     var useramount = 0.0
+    
+    var ifchnage = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +63,6 @@ class ViewController: UIViewController {
     @IBAction func changebtn(sender: UIButton) {
     
         
-        
     let tag = sender.tag
     
     print(tag)
@@ -71,7 +73,7 @@ class ViewController: UIViewController {
         
         sectionvc.del = tag
         sectionvc.changedelegate = self
-        present(sectionvc, animated: true, completion: nil)
+        present(sectionvc, animated: false, completion: nil)
         
     
     }
@@ -91,7 +93,14 @@ class ViewController: UIViewController {
     //button to change rate
     @IBAction func rateChngebtn(_ sender: Any) {
     
+    let sectionvc = storyboard?.instantiateViewController(withIdentifier:"ratecontrol") as! ratecontrol
         
+        sectionvc.selected = 1
+        
+        
+        sectionvc.ratechnagedelegate = self
+        
+        present(sectionvc, animated: false, completion: nil)
         
     }
     
@@ -99,23 +108,80 @@ class ViewController: UIViewController {
     @IBAction func Resultbtn(_ sender: Any) {
     
        
+        //USA
     if countrylabel1.text == "USA"  ||  countrylabel2.text == "IND"{
 
-     rate = Double(defaultChngeRate.text!) ?? 0
+     
      rate = 2
      useramount = Double(useramt.text!) ?? 0
      var result =  rate * useramount
      showResultlabel.text = "\(result)"
     
-        
-        
-
         }
+        
+    else if countrylabel1.text == "USA"  ||  countrylabel2.text == "CAD"{
+        
+        rate = Double(defaultChngeRate.text!) ?? 0
+        rate = 3
+        useramount = Double(useramt.text!) ?? 0
+        var result =  rate * useramount
+        showResultlabel.text = "\(result)"
+        
+        
+    }
+        
+        //INDIA
+        
+    else if countrylabel1.text == "IND"  ||  countrylabel2.text == "CAD"{
+        
+        rate = Double(defaultChngeRate.text!) ?? 0
+        rate = 4
+        useramount = Double(useramt.text!) ?? 0
+        var result =  rate * useramount
+        showResultlabel.text = "\(result)"
+        
+        
+    }
+        
+    else if countrylabel1.text == "IND"  ||  countrylabel2.text == "USA"{
+        
+        rate = Double(defaultChngeRate.text!) ?? 0
+        rate = 5
+        useramount = Double(useramt.text!) ?? 0
+        var result =  rate * useramount
+        showResultlabel.text = "\(result)"
+        
+        
+    }
+        //CAD
+    else if countrylabel1.text == "CAD"  ||  countrylabel2.text == "USA"{
+        
+        rate = Double(defaultChngeRate.text!) ?? 0
+        rate = 6
+        useramount = Double(useramt.text!) ?? 0
+        var result =  rate * useramount
+        showResultlabel.text = "\(result)"
+        
+        
+    }
+        
+        
+    else if countrylabel1.text == "CAD"  ||  countrylabel2.text == "USA"{
+        
+        rate = Double(defaultChngeRate.text!) ?? 0
+        rate = 7
+        useramount = Double(useramt.text!) ?? 0
+        var result =  rate * useramount
+        showResultlabel.text = "\(result)"
+        
+        
+    }
+        
+        
         
     else{
         
-        showResultlabel.text = "0.0"
-        
+      showResultlabel.text = "0.0"
         
         }
     }
@@ -138,6 +204,24 @@ extension ViewController : change{
         
         
     }
+
+}
+
+extension ViewController : tochange{
+  
+    func tobechnage(selected: Int, changevalue: Double) {
+        
+        if selected == 1{
+            
+            ifchnage = selected
+            rate = changevalue
+            defaultChngeRate.text = "\(rate)"
+            
+        }
+    
+    
+    }
+    
     
     
     

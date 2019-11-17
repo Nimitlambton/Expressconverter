@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059846B52381CC10006C842B /* ratecontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059846B42381CC10006C842B /* ratecontrol.swift */; };
 		05A5E40F237DC8860016FD68 /* Tabelcontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A5E40E237DC8860016FD68 /* Tabelcontrol.swift */; };
 		9B5B3613237F1EED004DC116 /* cellcontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B3612237F1EED004DC116 /* cellcontrol.swift */; };
 		9BB894D22379C64600AA69A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB894D12379C64600AA69A4 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059846B42381CC10006C842B /* ratecontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ratecontrol.swift; sourceTree = "<group>"; };
 		05A5E40E237DC8860016FD68 /* Tabelcontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabelcontrol.swift; sourceTree = "<group>"; };
 		9B5B3612237F1EED004DC116 /* cellcontrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellcontrol.swift; sourceTree = "<group>"; };
 		9BB894CE2379C64600AA69A4 /* ExpressConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				9BB894D82379C64800AA69A4 /* Assets.xcassets */,
 				9BB894DA2379C64800AA69A4 /* LaunchScreen.storyboard */,
 				9BB894DD2379C64800AA69A4 /* Info.plist */,
+				059846B42381CC10006C842B /* ratecontrol.swift */,
 			);
 			path = ExpressConverter;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059846B52381CC10006C842B /* ratecontrol.swift in Sources */,
 				9BB894D42379C64600AA69A4 /* ViewController.swift in Sources */,
 				9B5B3613237F1EED004DC116 /* cellcontrol.swift in Sources */,
 				05A5E40F237DC8860016FD68 /* Tabelcontrol.swift in Sources */,
