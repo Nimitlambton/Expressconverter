@@ -31,7 +31,7 @@ class Tabelcontrol: UITableViewController {
 
     // MARK: - Table view data source
 
-    let country:[String] = ["IND", "ÜSA" , "CAD" ]
+    let country:[String] = ["IND", "USA" , "CAD" ]
     
     
     

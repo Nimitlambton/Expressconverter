@@ -108,8 +108,22 @@ class ViewController: UIViewController {
     @IBAction func Resultbtn(_ sender: Any) {
     
        
+        if ifchnage == 1{
+            
+        
+            var result = rate * useramount
+            showResultlabel.text = "\(result)"
+        
+        }
+        
+        
+        else{
+        
+            print(countrylabel1.text!)
+            
+            print(countrylabel2.text!)
         //USA
-    if countrylabel1.text == "USA"  ||  countrylabel2.text == "IND"{
+    if countrylabel1.text! == "USA"  &&  countrylabel2.text! == "IND"{
 
      
      rate = 2
@@ -119,7 +133,7 @@ class ViewController: UIViewController {
     
         }
         
-    else if countrylabel1.text == "USA"  ||  countrylabel2.text == "CAD"{
+    else if countrylabel1.text! == "USA"   &&  countrylabel2.text! == "CAD"{
         
         rate = Double(defaultChngeRate.text!) ?? 0
         rate = 3
@@ -132,7 +146,7 @@ class ViewController: UIViewController {
         
         //INDIA
         
-    else if countrylabel1.text == "IND"  ||  countrylabel2.text == "CAD"{
+    else if countrylabel1.text! == "IND"  &&  countrylabel2.text! == "CAD"{
         
         rate = Double(defaultChngeRate.text!) ?? 0
         rate = 4
@@ -143,7 +157,7 @@ class ViewController: UIViewController {
         
     }
         
-    else if countrylabel1.text == "IND"  ||  countrylabel2.text == "USA"{
+    else if countrylabel1.text! == "IND"  &&  countrylabel2.text! == "USA"{
         
         rate = Double(defaultChngeRate.text!) ?? 0
         rate = 5
@@ -154,7 +168,7 @@ class ViewController: UIViewController {
         
     }
         //CAD
-    else if countrylabel1.text == "CAD"  ||  countrylabel2.text == "USA"{
+    else if countrylabel1.text! == "CAD"  &&  countrylabel2.text! == "USA"{
         
         rate = Double(defaultChngeRate.text!) ?? 0
         rate = 6
@@ -166,7 +180,7 @@ class ViewController: UIViewController {
     }
         
         
-    else if countrylabel1.text == "CAD"  ||  countrylabel2.text == "USA"{
+    else if countrylabel1.text! == "CAD"  &&  countrylabel2.text! == "USA"{
         
         rate = Double(defaultChngeRate.text!) ?? 0
         rate = 7
@@ -183,8 +197,12 @@ class ViewController: UIViewController {
         
       showResultlabel.text = "0.0"
         
+     
+            }
+    
         }
-    }
+        
+        }
     
 }
 
