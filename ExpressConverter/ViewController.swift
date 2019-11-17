@@ -212,12 +212,14 @@ extension ViewController : change{
         if number == 0{
             
             countrylabel1.text = countryname
+            countryFlag1.image = UIImage(named : countryname)
             
         }
         else if number == 1{
             
              countrylabel2.text = countryname
-            
+           
+            countryFlag2.image = UIImage(named : countryname)
         }
         
         

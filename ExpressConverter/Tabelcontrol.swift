@@ -33,7 +33,9 @@ class Tabelcontrol: UITableViewController {
 
     let country:[String] = ["IND", "USA" , "CAD" ]
     
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -53,7 +55,8 @@ class Tabelcontrol: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
     
         cell?.clbl.text = country[indexPath.row]
-    
+        cell?.cimg.image = UIImage(named: country[indexPath.row])
+        
         return cell!
     
     }

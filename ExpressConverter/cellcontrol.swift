@@ -18,7 +18,9 @@ class cellcontrol: UITableViewCell {
     @IBOutlet weak var clbl: UILabel!
     
     
-    @IBOutlet weak var clbl2: UILabel!
+
+    
+    @IBOutlet weak var cimg: UIImageView!
     
     
     override func awakeFromNib() {
