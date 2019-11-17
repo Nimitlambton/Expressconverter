@@ -64,84 +64,40 @@ class Tabelcontrol: UITableViewController {
         
 
        
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
+       let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? cellcontrol
        
         let data = storyboard?.instantiateViewController(withIdentifier: "ABC") as? ViewController
-        
         data?.clbl = country[indexPath.row]
-        
-        data?.clbl2 = country[indexPath.row]
-        
+       tosend = country[indexPath.row]
         
         
-        tosend = country[indexPath.row]
-        
-        performSegue(withIdentifier: "val", sender: self)
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let vc = segue.destination as! ViewController
+        helloworld()
       
+ 
         
-        print(del)
-        if del == 1{
-        
-            vc.clbl = self.tosend
+    }
+
     
-        }
-     else if del == 0 {
+    func helloworld() {
         
-            vc.clbl2 = self.tosend
+        let main = UIStoryboard(name:"Main", bundle: Bundle.main)
         
-        }
+         let mainNavie = main.instantiateViewController(withIdentifier: "ABC" ) as? ViewController
         
         
+        
+        mainNavie?.clbl = tosend
+        
+        //mainNavie?.clbl2 = tosend
+        mainNavie?.tag = del
+        present(mainNavie!, animated: true, completion:nil)
+        
+       print(del)
+        
+    
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var tag = 0
     var clbl = "country"
     var clbl2 = "country"
+    
     //<-- all the labels --->
 
     //amount enter by user
@@ -48,8 +49,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = " Express conv"
-        countrylabel1.text = clbl
-        countrylabel2.text = clbl2
+        
+        
+        print("tag value = \(tag)")
+
+        if tag == 1 {
+            
+            print("heypoo")
+            
+            
+            countrylabel2.text = clbl
+        }
+        else  {
+            
+            print ("heypoo2")
+        
+            countrylabel1.text = clbl
+        }
+        
+            
+        
+        
+        
+        
+            
+        
         
         
         
@@ -64,6 +88,8 @@ class ViewController: UIViewController {
     tag = sender.tag
     
     performSegue(withIdentifier: "change", sender: self)
+    
+    
     
     }
     
