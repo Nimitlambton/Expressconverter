@@ -33,13 +33,12 @@
                                         <rect key="frame" x="18" y="39" width="95" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-OZ-bwD">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-OZ-bwD">
                                         <rect key="frame" x="325" y="53" width="53" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Change"/>
                                         <connections>
                                             <action selector="changebtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJB-vP-gyb"/>
-                                            <segue destination="r6s-Tx-ZJU" kind="show" identifier="change" id="sAA-Ep-QL2"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Country " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-QA-5R0">
@@ -74,13 +73,12 @@
                                         <rect key="frame" x="28" y="37" width="95" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gai-5r-vpl">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gai-5r-vpl">
                                         <rect key="frame" x="324" y="58" width="53" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Change"/>
                                         <connections>
                                             <action selector="changebtnWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKr-9f-xFo"/>
-                                            <segue destination="r6s-Tx-ZJU" kind="show" identifier="change" id="QK2-h0-Yew"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -212,7 +210,7 @@
         <!--Tabelcontrol-->
         <scene sceneID="gwf-tB-Ucm">
             <objects>
-                <tableViewController id="r6s-Tx-ZJU" customClass="Tabelcontrol" customModule="ExpressConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tabel" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r6s-Tx-ZJU" customClass="Tabelcontrol" customModule="ExpressConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HhM-gd-Imh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +234,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="clbl" destination="Ueg-Qc-b3Z" id="oPl-IH-gwI"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ypy-aA-2Uc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -269,8 +266,4 @@
             <point key="canvasLocation" x="1118.840579710145" y="-73.660714285714278"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sAA-Ep-QL2"/>
-        <segue reference="ypy-aA-2Uc"/>
-    </inferredMetricsTieBreakers>
 </document>

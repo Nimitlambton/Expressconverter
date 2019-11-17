@@ -14,9 +14,7 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    var tag = 0
-    var clbl = "country"
-    var clbl2 = "country"
+  
     
     //<-- all the labels --->
 
@@ -50,33 +48,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = " Express conv"
         
-        
-        print("tag value = \(tag)")
-
-        if tag == 1 {
-            
-            print("heypoo")
-            
-            
-            countrylabel2.text = clbl
-        }
-        else  {
-            
-            print ("heypoo2")
-        
-            countrylabel1.text = clbl
-        }
-        
-            
-        
-        
-        
-        
-            
-        
-        
-        
-        
     }
     
     
@@ -85,23 +56,30 @@ class ViewController: UIViewController {
     @IBAction func changebtn(sender: UIButton) {
     
         
-    tag = sender.tag
+        
+    let tag = sender.tag
     
-    performSegue(withIdentifier: "change", sender: self)
+    print(tag)
+    //performSegue(withIdentifier: "change", sender: self)
     
-    
+    let sectionvc = storyboard?.instantiateViewController(withIdentifier:"tabel") as! Tabelcontrol
+        
+        sectionvc.del = tag
+        sectionvc.changedelegate = self
+        present(sectionvc, animated: true, completion: nil)
+        
     
     }
     
 
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let vc = segue.destination as! Tabelcontrol
-        
-        vc.del = self.tag
-    
-    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        let vc = segue.destination as! Tabelcontrol
+//
+//        vc.del = self.tag
+//
+//    }
     
     
     
@@ -119,25 +97,26 @@ class ViewController: UIViewController {
         
     }
     
-   
     
-  
+}
 
-
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
+extension ViewController : change{
+    func following(countryname: String, number: Int) {
+        
+        if number == 0{
+            
+            countrylabel1.text = countryname
+            
+        }
+        else if number == 1{
+            
+             countrylabel2.text = countryname
+            
+        }
+        
+        
+    }
     
     
     
 }
-
