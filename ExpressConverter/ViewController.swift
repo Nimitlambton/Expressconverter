@@ -42,7 +42,11 @@ class ViewController: UIViewController {
     //resultlabel
     @IBOutlet weak var showResultlabel: UILabel!
     
+ //global vaiables
     
+    var rate = 0.0
+    
+    var useramount = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +64,8 @@ class ViewController: UIViewController {
     let tag = sender.tag
     
     print(tag)
-    //performSegue(withIdentifier: "change", sender: self)
+    
+        //performSegue(withIdentifier: "change", sender: self)
     
     let sectionvc = storyboard?.instantiateViewController(withIdentifier:"tabel") as! Tabelcontrol
         
@@ -70,7 +75,7 @@ class ViewController: UIViewController {
         
     
     }
-    
+
 
 //
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,10 +98,27 @@ class ViewController: UIViewController {
     
     @IBAction func Resultbtn(_ sender: Any) {
     
-        print("convertbtn")
-        
-    }
+       
+    if countrylabel1.text == "USA"  ||  countrylabel2.text == "IND"{
+
+     rate = Double(defaultChngeRate.text!) ?? 0
+     rate = 2
+     useramount = Double(useramt.text!) ?? 0
+     var result =  rate * useramount
+     showResultlabel.text = "\(result)"
     
+        
+        
+
+        }
+        
+    else{
+        
+        showResultlabel.text = "0.0"
+        
+        
+        }
+    }
     
 }
 
